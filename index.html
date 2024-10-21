@@ -40,17 +40,16 @@
 
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <!-- <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+<!-- 
+    <div class="profile-img">
+      <img src="./assets/img/profile.jpg" alt="" class="img-fluid rounded-circle">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-     
-      <h1 class="sitename">Alex Smith</h1>
-    </a> -->
+      <h1 class="sitename">Ramil Aoanan</h1>
+    </a>
 
-    <!-- <div class="social-links text-center">
+    <div class="social-links text-center">
       <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
       <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
       <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
@@ -61,12 +60,11 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#skills"><i class="bi bi-hdd-stack navicon"></i> Skills</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        
-        <!-- <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <li><a href="#about" class=""><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume" class=""><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#portfolio" class=""><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="#services" class=""><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
             <li><a href="#">Dropdown 1</a></li>
             <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -82,8 +80,8 @@
             <li><a href="#">Dropdown 3</a></li>
             <li><a href="#">Dropdown 4</a></li>
           </ul>
-        </li> -->
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        </li>
+        <li><a href="#contact" class=""><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
     </nav>
 
@@ -92,7 +90,7 @@
   <main class="main">
 
 
-    <section id="intro" class="section dark-background intro-section d-flex align-items-center justify-content-center flex-column">
+    <!-- <section id="intro" class="section dark-background intro-section d-flex align-items-center justify-content-center flex-column">
       
       <div class="container intro-text" data-aos="fade-up" data-aos-delay="100">
         <h1>
@@ -105,24 +103,25 @@
           <i class="bi bi-chevron-down"></i>
         </a>
 
-    </section>
+    </section> -->
 
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img class="bg-img" src="https://images.unsplash.com/photo-1610524193579-35934d02c8f3?q=80&amp;w=2940&amp;auto=format&amp;fit=crop" alt="">
+      <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+        <h2 id="greeting"></h2>
+        <p>My name is Ramil. I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <a href="#hero" class="scroll-down" title="Scroll Down">
+          <i class="bi bi-chevron-down"></i>
+          <i class="bi bi-chevron-down"></i>
+        </a>
+      </div>
 
       <div class="about-me-pic">
         <img src="./assets/img/about-me-no-bg.png" class="img-fluid" alt="">
       </div>
 
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <p>Hi, I'm <span>Ramil.</span> Nice to meet you.</p>
-      </div>
-
-    </section><!-- /Hero Section -->
- 
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about section dark-background">
@@ -142,7 +141,7 @@
     
                 <p>
                   
-                  Hello, My name is Ramil. I'm a web developer with over 10 years of professional experience. I specialize in front-end development, with a focus on building modern, responsive websites that provide an optimal user experience.
+                  I'm a web developer with over 10 years of professional experience. I specialize in front-end development, with a focus on building modern, responsive websites that provide an optimal user experience.
                 </p>
     
                 <p>
@@ -352,7 +351,7 @@
       <!-- Section Title -->
       <div class="container section-title aos-init aos-animate" data-aos="fade-up">
         <h2>Portfolio</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <p>Welcome to my projects! Note: Everything here is still in progress. I will soon add my other future personal projects!</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -565,21 +564,21 @@
 
   </main>
 
-  <footer id="footer" class="footer dark-background position-relative">
+  <footer id="footer" class="footer position-relative light-background">
+
     <div class="container">
-    
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">2024</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          Designed by  <a href="index.html" class="logo">
-            R A
-           </a>
-     
-        </div>
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
+
   </footer>
 
   <!-- Scroll Top -->
