@@ -272,7 +272,6 @@ h6 {
 
 
 .header .header-toggle {
-  background-color: var(--background-color);
   color: var(--default-color);
   font-size: 22px;
   display: flex;
@@ -1453,17 +1452,18 @@ section,
   height: 22px;
   border-radius: 50%;
   position: absolute;
+  transition: all ease-in-out 0.3s;
 }
 
 .theme-toggler::before {
   background: var(--accent-color);
   left: -12px;
-  top: 0;
+  top: -2px;
 }
 
 .theme-toggler:checked::before {
-  left: 4px;
-  top: -3px;
+  left: 7px;
+  top: -2px;
 }
 
 .theme-toggler,
