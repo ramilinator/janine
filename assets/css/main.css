@@ -9,9 +9,9 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --default-color: #1e5068; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #1e5068; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #468b97; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -28,23 +28,11 @@
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
-.light-background {
-  --background-color: #f4fafd;
-  --surface-color: #ffffff;
-}
-
-.dark-background {
-  --background-color: #1e5068;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #151f2b;
-  --contrast-color: #ffffff;
-}
 
 body:has(#theme-toggle:checked) {
   --background-color: #1e5068;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
+  --default-color: #edeee9;
+  --heading-color: #edeee9;
   --surface-color: #151f2b;
   --contrast-color: #ffffff;
 }
@@ -60,7 +48,7 @@ body:has(#theme-toggle:checked) {
 body {
   color: var(--default-color);
   /* background-color: var(--background-color); */
-  background-color: color-mix(in srgb, var(--background-color), transparent 15%);
+  background-color: color-mix(in srgb, var(--background-color), transparent 12%);
   font-family: var(--default-font);
 }
 
@@ -181,7 +169,6 @@ h6 {
   z-index: 997;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 
@@ -194,7 +181,6 @@ h6 {
 
 .header .logo {
   line-height: 1;
-  margin-bottom: 15px;
 }
 
 .header .logo img {
@@ -206,7 +192,8 @@ h6 {
   font-size: 24px;
   margin: 0;
   font-weight: 700;
-  color: var(--heading-color);
+  color: var(--default-color);
+  opacity: .8;
 }
 
 .header .social-links {
@@ -494,7 +481,7 @@ h6 {
 .scroll-down i {
   font-size: 18px;
   line-height: 0;
-  color: var(--nav-color);
+  color: var(--accent-color);
 }
 
 .scroll-down i:hover {
@@ -647,6 +634,7 @@ section,
   z-index: 2;
   opacity: 95%;
   align-self: flex-end;
+  filter: saturate(0.8);
 }
 
 .profile-picture {
@@ -667,9 +655,6 @@ section,
 
 .hero .container {
   position: relative;
-  z-index: 3;
-  /* margin-top: 80px;
-  margin-left: 50%; */
   padding: 55px;
   display: flex;
     flex-direction: column;
@@ -691,7 +676,7 @@ section,
   font-size: 24px;
   background-color: var(--background-color);
   padding: 10px 30px;
-  color: var(--nav-color);
+  color: var(--accent-color);
   border-radius: 7px;
 }
 
@@ -856,7 +841,7 @@ section,
 
 .resume .resume-item {
   padding: 0 0 20px 20px;
-  margin-top: -2px;
+  margin-top: 25px;
   border-left: 2px solid var(--accent-color);
   position: relative;
 }
@@ -897,8 +882,8 @@ section,
   height: 16px;
   border-radius: 50px;
   left: -9px;
-  top: 0;
-  background: var(--background-color);
+  top: -15px;
+  background: transparent;
   border: 2px solid var(--accent-color);
 }
 
@@ -1452,7 +1437,7 @@ section,
 }
 
 .theme-toggler:checked::before {
-  left: 7px;
+  left: 10px;
   top: -2px;
 }
 
