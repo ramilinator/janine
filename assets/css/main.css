@@ -1180,7 +1180,7 @@ section,
   align-items: center;
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
-  margin-right: 15px;
+  margin: 15px;
 }
 
 .contact .info-item h3 {
