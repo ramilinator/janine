@@ -494,7 +494,13 @@ h6 {
   line-height: 0;
 }
 
-.scroll-down:hover {
+.scroll-down i {
+  font-size: 18px;
+  line-height: 0;
+  color: var(--nav-color);
+}
+
+.scroll-down i:hover {
   color: var(--accent-color);
 }
 
@@ -573,12 +579,6 @@ h6 {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-}
-
-.scroll-down i {
-  font-size: 18px;
-  line-height: 0;
-  color: var(--nav-color);
 }
 
 .scroll-down i:nth-child(2) {
