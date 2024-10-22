@@ -40,7 +40,9 @@
 
 <body class="index-page">
 
-  <header id="header" class="header dark-background d-flex flex-column">
+  <div class="container">
+
+  <header id="header" class="header d-flex flex-row">
     <i class="header-toggle d-xl-none bi bi-list"></i>
     <!-- 
     <div class="profile-img">
@@ -60,7 +62,7 @@
       <h1 class="sitename">Ramil Aoanan</h1>
     </a> -->
 
-    <nav id="navmenu" class="navmenu">
+    <nav id="navmenu" class="navmenu d-flex align-items-center justify-content-center flex-column">
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
         <li><a href="#about" class=""><i class="bi bi-person navicon"></i> About</a></li>
@@ -87,7 +89,18 @@
         </li> -->
         <li><a href="#contact" class=""><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
+
     </nav>
+
+    <div class="theme-toggle-wrapper">
+      <input type="checkbox" id="theme-toggle" class="theme-toggler">
+      <span class="label">Dark Mode</span>
+    </div>
+
+  </div>
+
+   
+    
 
   </header>
 
@@ -110,17 +123,19 @@
     </section> -->
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+    <section id="hero" class="hero section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2 id="greeting"></h2>
-        <p>I'm Ramil. <span class="typed" data-typed-items="Web Designer, Web Developer, Freelancer">Web
-            Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span
-            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-        <a href="#about" class="scroll-down" title="Scroll Down">
-          <i class="bi bi-chevron-down"></i>
-          <i class="bi bi-chevron-down"></i>
-        </a>
+        <p>Hello, my name is Ramil. <br> I'm a <span class="typed" data-typed-items="Web Developer">Web
+            Developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span
+            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+            <a href="#about" class="scroll-down" title="Scroll Down">
+              <i class="bi bi-chevron-down"></i>
+              <i class="bi bi-chevron-down"></i>
+            </a>  
+        </p>
+        
       </div>
 
       <div class="about-me-pic">
@@ -130,7 +145,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about section dark-background">
+    <section id="about" class="about section">
 
 
       <!-- Section Title -->
@@ -179,7 +194,7 @@
 
     </section><!-- /About Section -->
 
-    <section id="resume" class="resume section light-background">
+    <section id="resume" class="resume section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -437,7 +452,7 @@
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
+  <footer id="footer" class="footer position-relative">
 
     <div class="container">
       <div class="copyright text-center ">
@@ -477,6 +492,11 @@
   <script src="assets/js/main.js"></script>
 
   <script>
+
+    window.onload = function() {
+      // Select the checkbox by its ID and set it to checked
+      document.getElementById('theme-toggle').checked = true;
+    };
 
     function greetUser() {
       const currentHour = new Date().getHours();
