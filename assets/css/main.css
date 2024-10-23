@@ -35,6 +35,7 @@ body:has(#theme-toggle:checked) {
   --heading-color: #edeee9;
   --surface-color: #151f2b;
   --contrast-color: #ffffff;
+  --accent-color: #D56261;
 }
 
 /* Smooth scroll */
@@ -1411,14 +1412,15 @@ section,
   position: relative;
   width: 22px;
   height: 22px;
-  border: 2px solid var(--accent-color);
+  border: 3px solid var(--accent-color);
   border-radius: 50%;
   overflow: hidden;
 }
 
 .theme-toggler:checked {
-  /* border: 2px solid #ffffff; */
-  background-color: var(--default-color);
+  border: 4px dotted #D56261;
+    width: 26px;
+    height: 24px;
 }
 
 .theme-toggler::before, .theme-toggler:checked::before {
@@ -1432,13 +1434,15 @@ section,
 
 .theme-toggler::before {
   background: var(--accent-color);
-  left: -12px;
-  top: -2px;
+  left: 8px;
+  top: -3px;
 }
 
 .theme-toggler:checked::before {
-  left: 10px;
-  top: -2px;
+  background: #D56261;
+  border: 3px solid #D56261;
+  left: -10px;
+  top: -3px;
 }
 
 .theme-toggler,
