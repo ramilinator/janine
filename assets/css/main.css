@@ -1412,15 +1412,14 @@ section,
   position: relative;
   width: 22px;
   height: 22px;
-  border: 3px solid #D56261;
+  border: 3px solid var(--accent-color);
   border-radius: 50%;
   overflow: hidden;
 }
 
 .theme-toggler:checked {
-  border: 4px dotted #D56261;
-    width: 26px;
-    height: 24px;
+  border: 3px solid var(--accent-color);
+  background: wheat;
 }
 
 .theme-toggler::before, .theme-toggler:checked::before {
@@ -1432,16 +1431,17 @@ section,
   transition: all ease-in-out 0.3s;
 }
 
+
 .theme-toggler::before {
   background: #D56261;
-  left: 8px;
+  left: -13px;
   top: -3px;
 }
 
 .theme-toggler:checked::before {
   background: #D56261;
-  border: 3px solid #D56261;
-  left: -10px;
+  /* border: 3px solid #D56261; */
+  left: 8px;
   top: -3px;
 }
 
