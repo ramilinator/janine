@@ -1419,7 +1419,6 @@ section,
 
 .theme-toggler:checked {
   border: 3px solid var(--accent-color);
-  background: wheat;
 }
 
 .theme-toggler::before, .theme-toggler:checked::before {
@@ -1433,13 +1432,13 @@ section,
 
 
 .theme-toggler::before {
-  background: #D56261;
+  background: var(--accent-color);
   left: -13px;
   top: -3px;
 }
 
 .theme-toggler:checked::before {
-  background: #D56261;
+  background: var(--accent-color);
   /* border: 3px solid #D56261; */
   left: 8px;
   top: -3px;
