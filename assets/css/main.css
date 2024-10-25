@@ -473,16 +473,15 @@ h6 {
   transition: all 0.4s;
 }
 
-.scroll-top i {
+.scroll-top i, .scroll-down i {
   font-size: 24px;
   color: var(--contrast-color);
   line-height: 0;
 }
 
 .scroll-down i {
-  font-size: 18px;
-  line-height: 0;
-  color: var(--accent-color);
+  color: var(--default-color);
+  opacity: .7;
 }
 
 .scroll-down i:hover {
@@ -564,10 +563,6 @@ h6 {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-}
-
-.scroll-down i:nth-child(2) {
-  margin-top: -10px;
 }
 
 section#about, section#intro {
