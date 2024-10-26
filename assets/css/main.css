@@ -565,7 +565,7 @@ h6 {
   margin: 0 auto;
 }
 
-section#about, section#intro {
+section#about, section#gallery {
   background-color: var(--background-color);
 }
 
@@ -1438,4 +1438,23 @@ i.bi-moon-stars {
   font-size: 17px;
   margin-right: 5px;
   display: none;
+}
+
+/* Gallery */
+
+@media (min-width: 768px) {
+  .swiper {
+    max-height: 120px;
+  }
+}
+
+@media (max-width: 767px) {
+  .swiper {
+    max-height: 300px;
+  }
+}
+
+.swiper {
+  display: flex;
+  align-items: center;
 }
