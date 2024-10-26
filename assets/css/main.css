@@ -1441,20 +1441,37 @@ i.bi-moon-stars {
 }
 
 /* Gallery */
+/* 
+.swiper {
+  padding-bottom: 50px;
+} */
+
+/* .swiper-wrapper {
+  position: relative;
+  overflow-y: hidden;
+} */
 
 @media (min-width: 768px) {
-  .swiper {
-    max-height: 120px;
+  .swiper-wrapper {
+    max-height: 170px;
   }
 }
 
 @media (max-width: 767px) {
-  .swiper {
+  .swiper-wrapper {
     max-height: 300px;
   }
 }
 
-.swiper {
+.swiper-wrapper {
   display: flex;
   align-items: center;
+}
+
+.swiper-container {
+  position: relative;
+}
+
+#swiper-pagination {
+    bottom: -32px;
 }
