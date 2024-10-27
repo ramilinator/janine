@@ -1470,6 +1470,12 @@ i.bi-moon-stars {
   overflow-y: hidden;
 } */
 
+/* @media (min-width: 768px) {
+  .swiper-wrapper {
+    max-height: 115px;
+  }
+} */
+
 @media (min-width: 768px) {
   .swiper-wrapper {
     max-height: 145px;
@@ -1478,9 +1484,10 @@ i.bi-moon-stars {
 
 @media (max-width: 767px) {
   .swiper-wrapper {
-    max-height: 300px;
+    max-height: 215px;
   }
 }
+
 
 .swiper-wrapper {
   display: flex;
