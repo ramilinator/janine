@@ -692,13 +692,14 @@ section,
   font-size: 24px;
   background-color: var(--background-color);
   padding: 10px 30px;
-  color: var(--accent-color);
+  color: var(--default-color);
   border-radius: 7px;
+  opacity: .7;
 }
 
 .hero p span {
   letter-spacing: 1px;
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--default-color);
 }
 
 .hero .social-links {
