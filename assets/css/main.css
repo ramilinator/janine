@@ -1501,3 +1501,10 @@ i.bi-moon-stars {
 #swiper-pagination {
     bottom: -32px;
 }
+
+.download-link {
+  color: var(--default-color);
+  border: 2px solid var(--default-color);
+  border-radius: 4px;
+  padding: 10px;
+}
