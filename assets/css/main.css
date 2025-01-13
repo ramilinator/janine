@@ -949,7 +949,7 @@ section,
 .portfolio .portfolio-content {
   position: relative;
   overflow: hidden;
-  height: 400px !important;
+  height: 320px !important;
 }
 
 .portfolio .portfolio-content img {
