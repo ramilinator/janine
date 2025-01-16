@@ -101,6 +101,7 @@ p.sub-text {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  margin: 32px;
 }
 
 .cards-container {
@@ -144,9 +145,9 @@ header#header {
   padding: 2px;
 }
 
-/* .hamburger-menu {
-  display: none;
-} */
+.navigation-list {
+  padding-top: 5px;
+}
 
 .hamburger-menu span {
   display: none;
