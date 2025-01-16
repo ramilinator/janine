@@ -29,7 +29,7 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 
-body:has(#theme-toggle:checked) {
+:has(#theme-toggle:checked) {
   --background-color: #1e5068;
   --default-color: #edeee9;
   --heading-color: #edeee9;

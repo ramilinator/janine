@@ -1,9 +1,26 @@
+<input class="form-check-input" type="checkbox" id="menu-toggle">
+
+<div class="menu-button md:hidden">
+  <label class="bi bi-list" for="menu-toggle"></label>
+</div>
+
 <div class="logo w-auto">
   Logo
 </div>
-<ul class="navigation w-full flex max-md:flex-col items-center">
-  <li><a href="/">Home</a></li>
-  <li>Features</li>
-  <li>Pricing</li>
-  <li><a href="/blog.html">Blog</a></li>
-</ul>
+
+<div class="navigation-container h-[100vh] w-[300px] md:w-[100%] md:h-[100%] absolute md:relative bg-black md:bg-inherit">
+
+  <div class="close-button md:hidden">
+      <label class="bi bi-x-lg" for="menu-toggle"></label>
+  </div>
+  
+  <div class="navigation-list">
+    <input class="form-check-input" type="checkbox" id="menu-toggle">
+     <ul class="navigation w-full flex max-md:flex-col md:items-center">
+      <li><a href="/">Home</a></li>
+      <li>Features</li>
+      <li>Pricing</li>
+      <li><a href="/blog.html">Blog</a></li>
+    </ul>
+  </div>
+</div>
