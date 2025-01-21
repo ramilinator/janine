@@ -51,11 +51,15 @@ body {
   /* background-color: var(--background-color); */
   background-color: color-mix(in srgb, var(--background-color), transparent 12%);
   font-family: var(--default-font);
+  line-height: normal;
+}
+
+p {
+  line-height: 32px;
 }
 
 body::before {
   content: '';
-  background: url(../img/hero-bg.png) center no-repeat;
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -65,19 +69,6 @@ body::before {
   opacity: 15%;
   z-index: -1;
 }
-
-/* body::before {
-  content: '';
-  background: url(../img/hero-bg.png) center no-repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 15%;
-} */
 
 a {
   color: var(--accent-color);
@@ -88,6 +79,13 @@ a {
 a:hover {
   color: color-mix(in srgb, var(--default-color), transparent 25%);
   text-decoration: none;
+}
+
+.heading {
+  font-size: 64px;
+  text-align: left;
+  font-weight: bold;
+  line-height: 60px;
 }
 
 h1,
@@ -416,6 +414,9 @@ h6 {
   }
 }
 
+section#hero {
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
 
 /*--------------------------------------------------------------
 # Global Footer
@@ -595,7 +596,7 @@ section#about, section#gallery, .section-download {
 section,
 .section {
   color: var(--default-color);
-  /* background-color: var(--background-color); */
+  background-color: var(--background-color);
   padding: 60px 0;
   overflow: clip;
 }
@@ -636,9 +637,9 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 90vh;
+  min-height: 40vh;
   position: relative;
-  padding-top: 55px;
+  padding-top: 0;
   padding-bottom: 0;
   display: flex;
   align-items: center;
@@ -673,10 +674,10 @@ section,
   position: relative;
   padding: 55px;
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 50%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 50%;
 }
 
 .hero h2 {
@@ -685,6 +686,7 @@ section,
   font-size: 64px;
   font-weight: 700;
   opacity: .7;
+  text-align: left;
 }
 
 .hero p {
@@ -848,10 +850,11 @@ section,
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
-section#resume, section#skills, section#resume *, section#skills * {
+/* section#resume, section#skills, section#resume *, section#skills * {
   background-color: white;
   color: black !important;
-}
+  filter: grayscale(1);
+} */
 
 section#resume {
   padding-bottom: 0;
