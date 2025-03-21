@@ -7,12 +7,12 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #1e5068; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #1e5068; /* Color for headings, subheadings and title throughout the website */
+  --background-color: #C1C2C4; /* Background color for the entire website, including individual sections */
+  --default-color: #393E46; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #222831; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #468b97; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --surface-color: #C1C2C4; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #C1C2C4; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -30,9 +30,9 @@
 
 :has(#theme-toggle:checked) {
   --background-color: #393E46;
-  --default-color: #edeee9;
-  --heading-color: #edeee9;
-  --surface-color: #393E46;
+  --default-color: #C1C2C4;
+  --heading-color: #EEEEEE;
+  --surface-color: #222831;
   --contrast-color: #ffffff;
   --accent-color: #00ADB5;
 }
@@ -50,8 +50,8 @@ body {
   /* background-color: var(--background-color); */
   background-color: color-mix(in srgb, var(--background-color), transparent 12%);
   font-family: var(--default-font);
-  font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 200;
   line-height: normal;
 }
 
@@ -156,7 +156,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--surface-color);
+  background-color: var(--background-color);
   /* border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%); */
   width: 100%;
   height: 55px;
@@ -587,32 +587,34 @@ section#hero {
   margin: 0 auto;
 }
 
-section#about, section#gallery, .section-download {
-  background-color: var(--background-color);
-}
 
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
+
 section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 96px 0;
   overflow: clip;
+}
+
+section:nth-child(odd) {
+  background-color: var(--surface-color);
 }
 
 /*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  padding-bottom: 60px;
   position: relative;
 }
 
 .section-title h2 {
-  font-size: 32px;
-  font-weight: 700;
+  color: var(--default-color);
+  font-size: 64px;
+  font-weight: bold;
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
@@ -684,7 +686,6 @@ section,
 .hero h2 {
   color: var(--accent-color);
   font-family: var(--default-font);
-  margin: 0;
   font-size: 96px;
   line-height: 96px;
   font-weight: 900;
@@ -692,8 +693,7 @@ section,
 }
 
 .hero p {
-  margin-top: 48px; 
-  font-size: 18px;
+  margin-top: 24px; 
   background-color: var(--background-color);
   color: var(--default-color);
 }
@@ -750,11 +750,6 @@ section,
 # About Section
 --------------------------------------------------------------*/
 
-.about .content h2 {
-  font-weight: 700;
-  font-size: 24px;
-}
-
 .about .content ul {
   list-style: none;
   padding: 0;
@@ -775,6 +770,11 @@ section,
   margin-right: 5px;
   color: var(--accent-color);
   line-height: 0;
+}
+
+.about-me-section {
+  display: flex;
+  gap: 96px;
 }
 
 /*--------------------------------------------------------------
