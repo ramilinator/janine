@@ -159,11 +159,10 @@ h6 {
   background-color: var(--background-color);
   /* border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%); */
   width: 100%;
-  height: 55px;
   position: fixed;
   top: 0;
   left: 0;
-  padding: 0 15px;
+  padding: 16px;
   transition: all ease-in-out 0.3s;
   overflow-y: auto;
   z-index: 997;
@@ -243,7 +242,7 @@ h6 {
 
 .header .header-toggle {
   color: var(--default-color);
-  font-size: 22px;
+  font-size: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -688,7 +687,7 @@ section:nth-child(odd) {
   font-family: var(--default-font);
   font-size: 96px;
   line-height: 96px;
-  font-weight: 900;
+  font-weight: 800;
   text-align: left;
 }
 
@@ -777,37 +776,46 @@ section:nth-child(odd) {
   gap: 96px;
 }
 
+@media (max-width: 768px) {
+  .about-me-section {
+    flex-direction: column;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
-.stats .stats-item {
-  padding: 30px;
-  width: 100%;
+
+.metrics {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: center;
 }
 
-.stats .stats-item i {
+.metric-item {
+  padding: 24px;
+  background: var(--background-color);
+  min-width: 400px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.metric-icon {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-color);
+  border-radius: 50%;
+}
+
+.section-title span {
   color: var(--accent-color);
-  display: block;
-  font-size: 44px;
-  float: left;
-  line-height: 0;
-}
-
-.stats .stats-item .purecounter {
-  color: var(--heading-color);
-  font-size: 48px;
-  line-height: 40px;
-  display: block;
-  font-weight: 700;
-  margin-left: 60px;
-}
-
-.stats .stats-item p {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  padding: 15px 0 0 0;
-  margin: 0 0 0 60px;
-  font-family: var(--default-font);
-  font-size: 14px;
 }
 
 /*--------------------------------------------------------------
