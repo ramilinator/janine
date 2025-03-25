@@ -1560,14 +1560,14 @@ section#resume {
   .work-experience-item {
     flex-direction: row;
     padding: 0;
-    gap: 64px;
+    gap: 96px;
   }
 
   .work-experience-item .col-a {
     position: relative;
-    padding-right: 48px;
+    padding-right: 64px;
     padding-bottom: 32px;
-    width: 30%;
+    width: 40%;
   }
 
   .work-experience-item .col-b {
@@ -1575,7 +1575,7 @@ section#resume {
     display: flex;
     flex-direction: column;
     padding-bottom: 64px;
-    width: 70%;
+    width: 60%;
   }
 
   .work-experience-item .col-a::before {
