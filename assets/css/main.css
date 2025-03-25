@@ -673,7 +673,7 @@ section:nth-child(odd) {
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 16px;
 }
 
 .button {
@@ -1617,7 +1617,7 @@ i.bi-moon-stars {
   font-size: 18px;
   font-weight: 500;
   line-height: 1;
-  margin-bottom: 5px;
+  margin: 8px 4px;
   transition: all 0.3s ease-in-out;
   background: var(--background-color);
 }
@@ -1639,7 +1639,7 @@ i.bi-moon-stars {
 @media (max-width: 575px) {
   .portfolio .portfolio-filters li {
     font-size: 14px;
-    margin: 0 5px;
+    margin: 8px 4px;
   }
 }
 
