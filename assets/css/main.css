@@ -823,7 +823,7 @@ a.button  {
 
 .about-me-section {
   display: flex;
-  gap: 64px;
+  gap: 96px;
 }
 
 .about-me-section .metrics {
@@ -1384,79 +1384,6 @@ a.button  {
   height: auto;
 }
 
-
-/*--------------------------------------------------------------
-# Checkbox Button
---------------------------------------------------------------*/
-
-#theme-toggle-wrapper .form-check-input, #theme-toggle-wrapper.form-switch {
-  margin: 0;
-  padding: 0;
-}
-
-#theme-toggle-wrapper:has(.form-check-input:checked) i.bi-brightness-low {
-  display: none;
-}
-
-#theme-toggle-wrapper:has(.form-check-input:checked) i.bi-moon-stars {
-  display: block;
-}
-
-.form-check-input {
-  background-color: var(--accent-color);
-}
-
-.form-check-input:checked {
-  background-color: var(--accent-color);
-  border-color: transparent !important;
-}
-
-.form-check-input:focus {
-  border-color: none !important;
-  box-shadow: none;
-}
-
-.theme-toggle-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  z-index: 9999;
-  /* position: fixed; */
-  /* top: 15px; */
-  /* right: 15px; */
-}
-
-i.bi-brightness-low {
-  font-size: 24px;
-  line-height: 0;
-  color: var(--nav-color);
-}
-
-i.bi-moon-stars {
-  color: var(--nav-color);
-  line-height: 0;
-  font-size: 17px;
-  margin-right: 5px;
-  display: none;
-}
-
-
-/* Gallery */
-/* 
-.swiper {
-  padding-bottom: 50px;
-} */
-
-/* .swiper-wrapper {
-  position: relative;
-  overflow-y: hidden;
-} */
-
-/* @media (min-width: 768px) {
-  .swiper-wrapper {
-    max-height: 115px;
-  }
-} */
 
 @media (min-width: 768px) {
   .swiper-wrapper {
