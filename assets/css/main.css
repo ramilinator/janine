@@ -672,6 +672,7 @@ section:nth-child(odd) {
 
 .hero-buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
 }
 
@@ -825,10 +826,27 @@ a.button  {
   gap: 96px;
 }
 
+.about-me-section .metrics {
+  width: 40%;
+}
+
+.about-me-section .content {
+  width: 60%;
+}
+
 @media (max-width: 768px) {
   .about-me-section {
     flex-direction: column;
   }
+
+  .about-me-section .metrics {
+    width: 100%;
+  }
+  
+  .about-me-section .content {
+    width: 100%;
+  }
+
 }
 
 
@@ -845,9 +863,9 @@ a.button  {
 }
 
 .metric-item {
+  width: 100%;
   padding: 24px;
   background: var(--background-color);
-  min-width: 400px;
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -1480,53 +1498,107 @@ i.bi-moon-stars {
   max-width: 1240px;
   margin-inline: auto;
 }
-/* 
-.portfolio-image {
-  max-height: 350px;
-  max-width: 300px;
-  overflow: hidden;
-  margin-inline: auto;
-} */
 
 .work-experience-content {
   display: flex;
+  flex-direction: column;
 }
 
 .work-experience-item {
+  position: relative;
   display: flex;
+  gap: 96px;
 }
 
 .work-experience-item .col-a {
-  min-width: 400px;
-  padding: 32px;
-  padding-left: 0;
-  padding-top: 0;
+  position: relative;
+  padding-right: 96px;
+  width: 40%;
 }
 
 .work-experience-item .col-b {
   position: relative;
-  width: 100%;
-  padding: 32px;
-  padding-left: 96px;
-  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 64px;
+  width: 60%;
 }
 
-.work-experience-item .line {
-  position: relative;
-  width: 1px;
-  border-left: 1px dashed var(--accent-color);
-  height: 100%;
-  margin-top: 24px;
-}
-.work-experience-item .line::before {
+.work-experience-item .col-a::before {
   content: '';
   width: 25px;
   height: 25px;
   background: url('../img/circle.svg') 0 0 no-repeat;
   position: absolute;
-  top: -24px;
-  left: -12px;
+  top: 0;
+  right: -14px;
 }
+
+.work-experience-item .col-a::after {
+  content: '';
+  width: 1px;
+  height: calc(100% - 26px);
+  border-right: 1px dashed var(--accent-color);
+  position: absolute;
+  top: 25px;
+  right: -2px;
+}
+
+
+@media (max-width: 768px) {
+
+  .work-experience-item {
+    flex-direction: column;
+    padding-inline: 32px;
+    gap: 16px;
+  }
+
+  .work-experience-item::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: url('../img/circle.svg') 0 0 no-repeat;
+    position: absolute;
+    top: 0;
+    left: -11px;
+  }
+  
+  .work-experience-item::after {
+    content: '';
+    width: 1px;
+    height: calc(100% - 26px);
+    border-right: 1px dashed var(--accent-color);
+    position: absolute;
+    top: 25px;
+    left: 0;
+  }
+
+  .work-experience-item .col-a::before {
+    display: none;
+  }
+  
+  .work-experience-item .col-a::after {
+    display: none;
+  }
+
+  .work-experience-item .col-a {
+   width: 100%;
+   padding: 0;
+  }
+  
+  .work-experience-item .col-b {
+    width: 100%;
+    margin: 0;
+   }
+
+}
+
+@media (min-width: 768px) {
+  .work-experience-item .col-a {
+    padding-bottom: 64px;
+   }
+}
+
 
 
 /*--------------------------------------------------------------
@@ -1536,7 +1608,7 @@ i.bi-moon-stars {
   padding: 0;
   margin: 0 auto 20px auto;
   list-style: none;
-  text-align: center;
+  text-align: left;
 }
 
 .portfolio .portfolio-filters li {
@@ -1544,7 +1616,6 @@ i.bi-moon-stars {
   display: inline-block;
   font-size: 18px;
   font-weight: 500;
-  margin: 0 10px;
   line-height: 1;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
