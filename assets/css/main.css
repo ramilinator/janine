@@ -750,7 +750,7 @@ a.button  {
 }
 
 .hero p {
-  margin-top: 24px; 
+  margin-bottom: 64px;
   background-color: var(--background-color);
   color: var(--default-color);
 }
