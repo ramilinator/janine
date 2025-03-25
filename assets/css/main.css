@@ -823,15 +823,15 @@ a.button  {
 
 .about-me-section {
   display: flex;
-  gap: 96px;
+  gap: 64px;
 }
 
 .about-me-section .metrics {
-  width: 50%;
+  width: 40%;
 }
 
 .about-me-section .content {
-  width: 50%;
+  width: 60%;
 }
 
 @media (max-width: 768px) {
@@ -1560,14 +1560,14 @@ section#resume {
   .work-experience-item {
     flex-direction: row;
     padding: 0;
-    gap: 96px;
+    gap: 64px;
   }
 
   .work-experience-item .col-a {
     position: relative;
-    padding-right: 64px;
-    padding-bottom: 64px;
-    width: 40%;
+    padding-right: 48px;
+    padding-bottom: 32px;
+    width: 30%;
   }
 
   .work-experience-item .col-b {
@@ -1575,7 +1575,7 @@ section#resume {
     display: flex;
     flex-direction: column;
     padding-bottom: 64px;
-    width: 60%;
+    width: 70%;
   }
 
   .work-experience-item .col-a::before {
