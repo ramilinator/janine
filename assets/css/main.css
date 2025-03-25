@@ -164,7 +164,6 @@ h6 {
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  /* border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%); */
   width: 100%;
   position: fixed;
   top: 0;
@@ -175,6 +174,7 @@ h6 {
   z-index: 997;
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 
 /* @media (max-width: 768px) {
@@ -827,11 +827,11 @@ a.button  {
 }
 
 .about-me-section .metrics {
-  width: 40%;
+  width: 50%;
 }
 
 .about-me-section .content {
-  width: 60%;
+  width: 50%;
 }
 
 @media (max-width: 768px) {
@@ -841,6 +841,8 @@ a.button  {
 
   .about-me-section .metrics {
     width: 100%;
+        max-width: 375px;
+        margin: 0 auto;
   }
   
   .about-me-section .content {
@@ -1264,6 +1266,7 @@ a.button  {
 .portfolio-details .portfolio-info {
   padding: 30px;
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -1490,6 +1493,9 @@ i.bi-moon-stars {
 
 /* PORTFOLIO */
 
+section#resume {
+  padding-bottom: 0;
+}
 
 .container-grid {
   display: grid;
@@ -1507,50 +1513,24 @@ i.bi-moon-stars {
 .work-experience-item {
   position: relative;
   display: flex;
-  gap: 96px;
+  flex-direction: column;
+  padding-inline: 32px;
+  padding-bottom: 48px;
+  gap: 16px;
+}
+
+.work-experience-item:last-child {
+  padding-bottom: 96px;
 }
 
 .work-experience-item .col-a {
-  position: relative;
-  padding-right: 96px;
-  width: 40%;
+  width: 100%;
+  padding: 0;
 }
 
 .work-experience-item .col-b {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 64px;
-  width: 60%;
-}
-
-.work-experience-item .col-a::before {
-  content: '';
-  width: 25px;
-  height: 25px;
-  background: url('../img/circle.svg') 0 0 no-repeat;
-  position: absolute;
-  top: 0;
-  right: -14px;
-}
-
-.work-experience-item .col-a::after {
-  content: '';
-  width: 1px;
-  height: calc(100% - 26px);
-  border-right: 1px dashed var(--accent-color);
-  position: absolute;
-  top: 25px;
-  right: -2px;
-}
-
-
-@media (max-width: 768px) {
-
-  .work-experience-item {
-    flex-direction: column;
-    padding-inline: 32px;
-    gap: 16px;
+  width: 100%;
+  margin: 0;
   }
 
   .work-experience-item::before {
@@ -1562,7 +1542,8 @@ i.bi-moon-stars {
     top: 0;
     left: -11px;
   }
-  
+
+ 
   .work-experience-item::after {
     content: '';
     width: 1px;
@@ -1573,32 +1554,69 @@ i.bi-moon-stars {
     left: 0;
   }
 
-  .work-experience-item .col-a::before {
-    display: none;
-  }
-  
-  .work-experience-item .col-a::after {
-    display: none;
-  }
-
-  .work-experience-item .col-a {
-   width: 100%;
-   padding: 0;
-  }
-  
-  .work-experience-item .col-b {
-    width: 100%;
-    margin: 0;
-   }
-
-}
 
 @media (min-width: 768px) {
+
+  .work-experience-item {
+    flex-direction: row;
+    padding: 0;
+    gap: 96px;
+  }
+
   .work-experience-item .col-a {
+    position: relative;
+    padding-right: 64px;
     padding-bottom: 64px;
-   }
+    width: 40%;
+  }
+
+  .work-experience-item .col-b {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 64px;
+    width: 60%;
+  }
+
+  .work-experience-item .col-a::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: url('../img/circle.svg') 0 0 no-repeat;
+    position: absolute;
+    top: 0;
+    right: -14px;
+  }
+
+  .work-experience-item .col-a::after {
+    content: '';
+    width: 1px;
+    height: calc(100% - 26px);
+    border-right: 1px dashed var(--accent-color);
+    position: absolute;
+    top: 25px;
+    right: -2px;
+  }
+
+  .work-experience-item::before {
+    display: none;
+  }
+  
+  .work-experience-item::after {
+    display: none;
+  }
+
+  .work-experience-item:last-child {
+    padding: 0;
+  }
+
+  .work-experience-item:last-child .col-b {
+    padding-bottom: 96px;
+  }
+  
 }
 
+   
 
 
 /*--------------------------------------------------------------
@@ -1688,9 +1706,9 @@ i.bi-moon-stars {
 .portfolio .portfolio-content .portfolio-info .preview-link,
 .portfolio .portfolio-content .portfolio-info .details-link {
   position: absolute;
-  left: calc(50% - 40px);
+  left: 24px;
   font-size: 26px;
-  top: calc(50% - 14px);
+  top: 24px;
   color: #fff;
   transition: 0.3s;
   line-height: 1.2;
