@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: 'Poppins-bold';
   src: url('./fonts/Poppins-Bold.ttf') format('truetype');
@@ -37,7 +36,7 @@
 
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #393E46;
   --default-color: #C1C2C4;
   --heading-color: #EEEEEE;
@@ -263,7 +262,7 @@ h6 {
 
 .header.header-show .header-toggle {
   background: none;
-  }
+}
 
 .header .header-toggle:hover {
   color: var(--default-color);
@@ -393,32 +392,32 @@ h6 {
 }
 
 
- 
-  .navmenu {
-    position: fixed;
-    background: var(--background-color);
-    border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    width: 300px;
-    height: 100vh;
-    top: 0;
-    left: -100%;
-    transition: all ease-in-out 0.3s;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
 
-  .navmenu {
-    padding-top: 55px;
-  }
+.navmenu {
+  position: fixed;
+  background: var(--background-color);
+  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  width: 300px;
+  height: 100vh;
+  top: 0;
+  left: -100%;
+  transition: all ease-in-out 0.3s;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 
-  .navmenu ul {
-    padding: 0 0 20px 0;
-  }
+.navmenu {
+  padding-top: 55px;
+}
 
-  .theme-toggle-wrapper {
-    position: fixed;
-    right: 15px;
-  }
+.navmenu ul {
+  padding: 0 0 20px 0;
+}
+
+.theme-toggle-wrapper {
+  position: fixed;
+  right: 15px;
+}
 
 section#hero {
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
@@ -501,7 +500,8 @@ section#hero {
   transition: all 0.4s;
 }
 
-.scroll-top i, .scroll-down i {
+.scroll-top i,
+.scroll-down i {
   font-size: 24px;
   color: var(--contrast-color);
   line-height: 0;
@@ -578,7 +578,8 @@ section#hero {
   gap: 15px;
 }
 
-.intro-text, .intro-text > * {
+.intro-text,
+.intro-text>* {
   text-align: center;
   /* color: color-mix(in srgb, var(--background-color), transparent 20%); */
 }
@@ -689,7 +690,7 @@ section:nth-child(odd) {
   margin-left: 4px;
 }
 
-a.button  {
+a.button {
   color: var(--contrast-color);
 }
 
@@ -827,7 +828,7 @@ a.button  {
 }
 
 .about-me-section .metrics {
-  width: 40%;
+  width: auto;
 }
 
 .about-me-section .content {
@@ -840,11 +841,10 @@ a.button  {
   }
 
   .about-me-section .metrics {
-    width: 100%;
-        max-width: 375px;
-        margin: 0 auto;
+    width: auto;
+    margin: 0 auto;
   }
-  
+
   .about-me-section .content {
     width: 100%;
   }
@@ -861,13 +861,12 @@ a.button  {
   flex-direction: column;
   flex-wrap: wrap;
   gap: 32px;
-  align-items: center;
 }
 
 .metric-item {
-  width: 100%;
+  width: auto;
   padding: 24px;
-  background: var(--background-color);
+  border: 1px solid var(--background-color);
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -879,7 +878,7 @@ a.button  {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--surface-color);
+  border: 1px solid var(--default-color);
   border-radius: 50%;
 }
 
@@ -1375,7 +1374,7 @@ a.button  {
 
 @media (min-width: 1200px) {
   .d-xl-none {
-      display: flex !important;
+    display: flex !important;
   }
 }
 
@@ -1408,7 +1407,7 @@ a.button  {
 }
 
 #swiper-pagination {
-    bottom: -32px;
+  bottom: -32px;
 }
 
 .download-link {
@@ -1458,28 +1457,28 @@ section#resume {
 .work-experience-item .col-b {
   width: 100%;
   margin: 0;
-  }
+}
 
-  .work-experience-item::before {
-    content: '';
-    width: 25px;
-    height: 25px;
-    background: url('../img/circle.svg') 0 0 no-repeat;
-    position: absolute;
-    top: 0;
-    left: -11px;
-  }
+.work-experience-item::before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  background: url('../img/circle.svg') 0 0 no-repeat;
+  position: absolute;
+  top: 0;
+  left: -11px;
+}
 
- 
-  .work-experience-item::after {
-    content: '';
-    width: 1px;
-    height: calc(100% - 26px);
-    border-right: 1px dashed var(--accent-color);
-    position: absolute;
-    top: 25px;
-    left: 0;
-  }
+
+.work-experience-item::after {
+  content: '';
+  width: 1px;
+  height: calc(100% - 26px);
+  border-right: 1px dashed var(--accent-color);
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
 
 
 @media (min-width: 768px) {
@@ -1528,7 +1527,7 @@ section#resume {
   .work-experience-item::before {
     display: none;
   }
-  
+
   .work-experience-item::after {
     display: none;
   }
@@ -1540,10 +1539,10 @@ section#resume {
   .work-experience-item:last-child .col-b {
     padding-bottom: 96px;
   }
-  
+
 }
 
-   
+
 
 
 /*--------------------------------------------------------------
@@ -1593,6 +1592,7 @@ section#resume {
   overflow: hidden;
   border-radius: 16px;
   background: var(--background-color);
+  padding: 48px;
 }
 
 .portfolio .portfolio-content img {
@@ -1658,4 +1658,20 @@ section#resume {
 
 .portfolio .portfolio-content:hover img {
   transform: scale(1.1);
+}
+
+.gslide-media {
+  background: var(--surface-color);
+}
+
+.glightbox-clean .gslide-description {
+  background: var(--background-color);
+}
+
+.glightbox-clean .gslide-title {
+  color: var(--default-color);
+}
+
+.glightbox-clean .gdesc-inner {
+  display: none;
 }
