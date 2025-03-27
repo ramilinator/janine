@@ -65,6 +65,10 @@ p {
   line-height: 32px;
 }
 
+label {
+  font-size: 16px;
+}
+
 body::before {
   content: '';
   background-size: cover;
@@ -103,6 +107,7 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--default-font);
+  font-weight: normal;
 }
 
 /* PHP Email Form Messages
@@ -827,36 +832,29 @@ a.button {
   gap: 96px;
 }
 
-.about-me-section .metrics {
-  width: auto;
-}
-
-.about-me-section .content {
-  width: 60%;
-}
-
-@media (max-width: 768px) {
-  .about-me-section {
-    flex-direction: column;
-  }
-
-  .about-me-section .metrics {
-    width: auto;
-    margin: 0 auto;
-  }
-
-  .about-me-section .content {
-    width: 100%;
-  }
-
-}
 
 
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
 
-.metrics {
+.about-me-section {
+  flex-direction: column;
+}
+
+.about-me-section .metrics {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.about-me-section .content {
+  width: 100%;
+}
+
+.about-me-section .metrics {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -864,9 +862,8 @@ a.button {
 }
 
 .metric-item {
-  width: auto;
   padding: 24px;
-  border: 1px solid var(--background-color);
+  background: var(--background-color);
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -878,12 +875,34 @@ a.button {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--default-color);
+  background: var(--surface-color);
   border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.metric-icon img {
+  width: 20px;
+  height: 20px;
 }
 
 .section-title span {
   color: var(--accent-color);
+}
+
+@media (min-width: 768px) {
+
+  .about-me-section {
+    flex-direction: row;
+  }
+
+  .about-me-section .metrics {
+    width: 40%;
+  }
+
+  .about-me-section .content {
+    width: 60%;
+    max-width: 848px;
+  }
 }
 
 /*--------------------------------------------------------------
