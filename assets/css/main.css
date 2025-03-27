@@ -167,7 +167,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--surface-color);
   width: 100%;
   position: fixed;
   top: 0;
