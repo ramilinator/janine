@@ -71,7 +71,6 @@
             <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
             <li><a href="#about" class=""><i class="bi bi-person navicon"></i> About</a></li>
             <li><a href="#portfolio" class=""><i class="bi bi-hdd-stack navicon"></i> Portfolio</a></li>
-            <li><a href="#gallery" class=""><i class="bi bi-camera navicon"></i> Gallery</a></li>
             <li><a href="https://ramilaoanan.wordpress.com/" target="_blank" class=""><i
                   class="bi bi-journals navicon"></i> Blog</a></li>
             <li><a href="#contact" class=""><i class="bi bi-envelope navicon"></i> Contact</a></li>
@@ -127,9 +126,6 @@
         </div>
 
       </div>
-
-      <div class="glow"></div>
-      <div class="glow2"></div>
 
     </section>
 
@@ -561,6 +557,25 @@
     // Call the function to greet the user
     greetUser();
 
+  </script>
+
+  <script>
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", function () {
+      let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+        // Scrolling down
+        header.classList.add("hide");
+      } else {
+        // Scrolling up
+        header.classList.remove("hide");
+      }
+
+      lastScrollTop = scrollTop;
+    });
   </script>
 
 

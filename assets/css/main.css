@@ -168,7 +168,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  /* background-color: var(--surface-color); */
+  background-color: var(--surface-color);
   width: 100%;
   position: fixed;
   top: 0;
@@ -180,7 +180,7 @@ h6 {
   display: flex;
   align-items: center;
   gap: 8px;
-  height: 100vh;
+  height: 70px;
 }
 
 /* @media (max-width: 768px) {
@@ -199,7 +199,6 @@ h6 {
 
 .header .logo {
   line-height: 1;
-  display: none !important;
 }
 
 .header .logo img {
@@ -388,13 +387,11 @@ h6 {
 .menu-button {
   display: flex;
   align-items: center;
-  position: absolute;
-  top: 16px;
 }
 
 .navmenu {
   position: fixed;
-  background: var(--surface-color);
+  background: var(--background-color);
   /* border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%); */
   width: 300px;
   height: 100vh;
@@ -446,7 +443,7 @@ section#hero {
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
   }
 
   .menu-button {
@@ -710,8 +707,16 @@ section:nth-child(odd) {
 }
 
 .hero-text {
-  font-size: 92px;
-  line-height: 92px;
+  font-size: 82px;
+  line-height: 82px;
+}
+
+@media screen and (min-width:768px) {
+  .hero-text {
+    font-size: 92px;
+    line-height: 92px;
+  }
+
 }
 
 .hero-text .thin {
@@ -753,7 +758,7 @@ a.button {
 }
 
 .button-secondary {
-  background: var(--surface-color);
+  background: var(--background-color);
 }
 
 
@@ -786,9 +791,16 @@ a.button {
   padding: 55px;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  text-align: left;
+  align-items: center;
+  text-align: center;
   width: 50%;
+}
+
+@media screen and (min-width:768px) {
+  .hero .container {
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 
 .hero-text img {
@@ -1749,27 +1761,12 @@ section#resume {
 }
 
 
-.glow,
-.glow2 {
-  height: 20rem;
-  width: 20rem;
-  background-color: var(--accent-color);
-  filter: blur(150px);
-  border-radius: 150px;
-  z-index: 0;
-  opacity: 0.90;
+.hide {
+  display: none;
+  opacity: 0;
 }
 
-.glow {
-  position: absolute;
-  left: 0;
-  bottom: -50%;
-  transform: translate(-50%, 0);
-}
-
-.glow2 {
-  position: absolute;
-  right: 0;
-  bottom: 50%;
-  transform: translate(-50%, -50%);
+.header-show.hide {
+  display: block;
+  opacity: 1;
 }
