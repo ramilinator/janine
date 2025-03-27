@@ -54,6 +54,7 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
+  background: var(--surface-color);
   color: var(--default-color);
   font-family: var(--default-font-extra-light);
   font-size: 18px;
@@ -167,7 +168,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--surface-color);
+  /* background-color: var(--surface-color); */
   width: 100%;
   position: fixed;
   top: 0;
@@ -179,6 +180,7 @@ h6 {
   display: flex;
   align-items: center;
   gap: 8px;
+  height: 100vh;
 }
 
 /* @media (max-width: 768px) {
@@ -197,6 +199,7 @@ h6 {
 
 .header .logo {
   line-height: 1;
+  display: none !important;
 }
 
 .header .logo img {
@@ -210,6 +213,7 @@ h6 {
   font-weight: 700;
   color: var(--default-color);
   opacity: .8;
+  white-space: nowrap;
 }
 
 .header .social-links {
@@ -236,16 +240,6 @@ h6 {
   background: var(--accent-color);
 }
 
-/* @media (min-width: 769px) {
-  .header {
-    width: 100%;
-    align-items: center;
-  }
-  .navmenu ul {
-    display: flex;
-    padding: 0;
-  }
-} */
 
 .header-show .navmenu {
   left: 0;
@@ -287,6 +281,7 @@ h6 {
   justify-content: center;
   margin: 0 auto;
   z-index: 9997;
+  padding: 16px;
 }
 
 .navmenu ul {
@@ -337,7 +332,6 @@ h6 {
 }
 
 .navmenu a:hover,
-.navmenu .active,
 .navmenu .active:focus {
   color: var(--accent-color);
 }
@@ -394,14 +388,14 @@ h6 {
 .menu-button {
   display: flex;
   align-items: center;
+  position: absolute;
+  top: 16px;
 }
-
-
 
 .navmenu {
   position: fixed;
-  background: var(--background-color);
-  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  background: var(--surface-color);
+  /* border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%); */
   width: 300px;
   height: 100vh;
   top: 0;
@@ -425,7 +419,54 @@ h6 {
 }
 
 section#hero {
+  position: relative;
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  background: var(--surface-color);
+}
+
+@media screen and (min-width: 768px) {
+
+  .header {
+    height: 80px;
+    /* position: relative; */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-inline: -3.5rem; */
+    padding-inline: 3.5rem;
+    width: 100%;
+  }
+
+  .navmenu {
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: 0;
+    background: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .navmenu ul {
+    display: flex;
+    padding: 0;
+    gap: 24px;
+  }
+
+  .navicon {
+    display: none;
+  }
+
+  .header .logo {
+    display: block !important;
+  }
+
 }
 
 
@@ -624,12 +665,19 @@ section:nth-child(odd) {
 }
 
 .section-title h2 {
+  font-family: var(--default-font-bold);
+  font-weight: 900;
   color: var(--default-color);
-  font-size: 64px;
-  font-weight: bold;
+  font-size: 54px;
   margin-bottom: 64px;
   padding-bottom: 20px;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .section-title h2 {
+    font-size: 64px;
+  }
 }
 
 .section-title h2:after {
@@ -674,6 +722,7 @@ section:nth-child(odd) {
 .hero-text .bold {
   font-family: var(--default-font-bold);
   color: var(--accent-color);
+  font-weight: 900;
 }
 
 .hero-buttons {
@@ -748,16 +797,15 @@ a.button {
 
 .hero h1 {
   color: var(--accent-color);
-  font-family: ;
+  font-family: var(--default-font-bold);
   font-size: 96px;
   line-height: 96px;
-  font-weight: 800;
+  font-weight: 900;
   text-align: left;
 }
 
 .hero p {
   margin-bottom: 64px;
-  background-color: var(--background-color);
   color: var(--default-color);
 }
 
@@ -883,6 +931,11 @@ a.button {
 .metric-icon img {
   width: 20px;
   height: 20px;
+}
+
+.metric-item-label h5 {
+  font-size: 18px;
+  margin: 0;
 }
 
 .section-title span {
@@ -1693,4 +1746,30 @@ section#resume {
 
 .glightbox-clean .gdesc-inner {
   display: none;
+}
+
+
+.glow,
+.glow2 {
+  height: 20rem;
+  width: 20rem;
+  background-color: var(--accent-color);
+  filter: blur(150px);
+  border-radius: 150px;
+  z-index: 0;
+  opacity: 0.90;
+}
+
+.glow {
+  position: absolute;
+  left: 0;
+  bottom: -50%;
+  transform: translate(-50%, 0);
+}
+
+.glow2 {
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
 }
