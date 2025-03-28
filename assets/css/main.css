@@ -1578,6 +1578,7 @@ section#resume {
     padding-right: 64px;
     padding-bottom: 32px;
     width: 40%;
+    max-width: 400px;
   }
 
   .work-experience-item .col-b {
