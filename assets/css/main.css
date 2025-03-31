@@ -78,8 +78,11 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  opacity: 15%;
+  opacity: 10%;
   z-index: -1;
+  background: url('../img/desktop-bg.jpg') 0 0 no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
 }
 
 a {
@@ -168,7 +171,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--surface-color);
+  background: transparent;
   width: 100%;
   position: fixed;
   top: 0;
@@ -417,7 +420,7 @@ h6 {
 section#hero {
   position: relative;
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  background: var(--surface-color);
+  background: transparent;
 }
 
 @media screen and (min-width: 768px) {
@@ -696,7 +699,7 @@ section:nth-child(odd) {
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 90vh;
+  /* min-height: 90vh; */
   position: relative;
   padding-top: 72px;
   padding-bottom: 0;
