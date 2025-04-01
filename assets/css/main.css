@@ -704,6 +704,7 @@ section:nth-child(even) {
   display: flex;
   flex-direction: column;
   gap: calc(var(--responsive-size)/3);
+  min-height: 90vh;
 }
 
 .hero-heading {
