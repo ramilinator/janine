@@ -1,0 +1,59 @@
+:root {
+    --xxs: 16px;
+    --xs: 18px;
+    --sm: 24px;
+    --md: 32px;
+    --lg: 48px;
+    --xl: 64px;
+    --xxl: 96px;
+}
+
+@media screen and (min-width: 320px) {
+    :root {
+        --responsive-size: var(--xs);
+        --font-size-default: var(--xxs);
+        --font-size-heading-1: calc(var(--xl));
+        --font-size-heading-2: calc(var(--lg));
+        --font-size-heading-3: calc(var(--md));
+    }
+}
+
+@media screen and (min-width: 375px) {
+    :root {
+        --responsive-size: var(--md);
+        --font-size-default: var(--xs);
+        --font-size-heading-1: calc(var(--xl));
+        --font-size-heading-2: calc(var(--lg));
+        --font-size-heading-3: calc(var(--md));
+    }
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --responsive-size: var(--lg);
+        --font-size-default: var(--xs);
+        --font-size-heading-1: calc(var(--xxl));
+        --font-size-heading-2: calc(var(--xl));
+        --font-size-heading-3: calc(var(--lg));
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        --responsive-size: var(--xl);
+        --font-size-default: var(--xs);
+        --font-size-heading-1: calc(var(--xxl));
+        --font-size-heading-2: calc(var(--xl));
+        --font-size-heading-3: calc(var(--lg));
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    :root {
+        --responsive-size: var(--xxl);
+        --font-size-default: var(--xs);
+        --font-size-heading-1: calc(var(--xxl));
+        --font-size-heading-2: calc(var(--xl));
+        --font-size-heading-3: calc(var(--lg));
+    }
+}
