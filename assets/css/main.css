@@ -234,6 +234,7 @@ h6 {
 
 .header-show .navmenu {
   left: 0;
+  opacity: 1;
 }
 
 .header .header-toggle {
@@ -273,6 +274,7 @@ h6 {
   height: 100vh;
   top: 0;
   left: -100%;
+  opacity: 0;
   transition: all ease-in-out 0.3s;
   justify-content: flex-start;
   align-items: flex-start;
@@ -298,6 +300,8 @@ h6 {
   padding: 0 0 20px 0;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: var(--spacing);
 }
 
@@ -757,7 +761,8 @@ section,
 
 .about-me-pic {
   width: 100%;
-  padding-right: calc(var(--spacing)/2);
+  padding-right: calc(var(--spacing));
+  padding-top: calc(var(--spacing));
   z-index: 2;
   align-self: flex-end;
   filter: saturate(0.8);
