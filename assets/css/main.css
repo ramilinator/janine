@@ -59,7 +59,7 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
-  background: var(--surface-color);
+  /* background: var(--surface-color); */
   color: var(--default-color);
   font-family: var(--default-font-extra-light);
   font-size: var(--font-size-default);
@@ -658,9 +658,9 @@ section,
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-/* section:nth-child(even) {
+section:nth-child(even) {
   background-color: var(--background-color);
-} */
+}
 
 /*--------------------------------------------------------------
 # Global Section Titles
@@ -706,10 +706,11 @@ section,
   height: 100%;
   top: 0;
   left: 0;
-  opacity: 35%;
+  opacity: 10%;
   background: url('../img/desktop-bg.jpg') center no-repeat;
   background-size: cover;
-  /* z-index: -2; */
+  filter: grayscale(1);
+  z-index: -2;
 }
 
 .hero .container {
@@ -729,11 +730,13 @@ section,
   flex-direction: column;
   gap: calc(var(--spacing)/3);
   min-height: unset;
+  width: 100;
 }
 
 .hero-heading {
   font-size: var(--font-size-heading-1);
   line-height: var(--font-size-heading-1);
+  color: var(--surface-color);
 }
 
 .hero-heading .thin {
@@ -749,7 +752,7 @@ section,
   font-family: var(--default-font-thin);
   font-size: var(--font-size-heading-3);
   line-height: var(--font-size-heading-3);
-  color: var(--default-color);
+  color: var(--surface-color);
 }
 
 .hero-visual {
@@ -835,6 +838,10 @@ section,
 }
 
 @media screen and (min-width:768px) {
+
+  .hero-main {
+    width: 50%;
+  }
 
   .hero-visual {
     flex-direction: row;
