@@ -773,16 +773,11 @@ section:nth-child(even) {
 
 .hero-visual-info {
   width: 100%;
-  background: var(--accent-color-bg);
   padding: var(--spacing);
 }
 
 .hero-visual-info h2 {
   color: var(--background-color);
-}
-
-.hero-visual-info h2 span {
-  color: var(--default-color);
 }
 
 .hero-visual-info p {
